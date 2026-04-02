@@ -1,0 +1,86 @@
+# German translation for Bluetooth Smartlock GNOME Shell extension.
+# Copyright (C) 2026
+# This file is distributed under the same license as the PACKAGE package.
+# Johannes Hermann, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 09:22+0200\n"
+"PO-Revision-Date: 2026-04-02 12:00+0200\n"
+"Last-Translator: Johannes Hermann\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: indicator.js:14
+msgid "Bluetooth Smartlock"
+msgstr "Bluetooth-Smartlock"
+
+#: indicator.js:98
+msgid "Enable Smart Lock"
+msgstr "Smart Lock aktivieren"
+
+#: indicator.js:105
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: prefs.js:49
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: prefs.js:50
+msgid "Basic settings for the extension."
+msgstr "Grundlegende Einstellungen für die Erweiterung."
+
+#: prefs.js:62
+msgid "Advanced Settings"
+msgstr "Erweiterte Einstellungen"
+
+#: prefs.js:137
+msgid "unavailable"
+msgstr "nicht verfügbar"
+
+#: prefs.js:230
+msgid "bt-rssi service is not installed"
+msgstr "bt-rssi-Dienst ist nicht installiert"
+
+#: settings.ui:47
+msgid "Away duration (seconds)"
+msgstr "Abwesenheitsdauer (Sekunden)"
+
+#: settings.ui:89
+msgid "Reconnect polling"
+msgstr "Verbindungsabfrage"
+
+#: settings.ui:117
+msgid "Polling interval (seconds)"
+msgstr "Abfrageintervall (Sekunden)"
+
+#: settings.ui:164
+msgid "Current RSSI"
+msgstr "Aktueller RSSI"
+
+#: settings.ui:224
+msgid "Activate"
+msgstr "Aktivieren"
+
+#: settings.ui:260
+msgid "Hide indicator"
+msgstr "Indikator ausblenden"
+
+#: settings.ui:296
+msgid "Unlock automatically"
+msgstr "Automatisch entsperren"
+
+#: settings.ui:335
+msgid "Proximity lock (RSSI)"
+msgstr "Entfernungssperre (RSSI)"
+
+#: settings.ui:371
+msgid "Advanced settings"
+msgstr "Erweiterte Einstellungen"

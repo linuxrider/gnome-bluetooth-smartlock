@@ -5,7 +5,7 @@ GETTEXT_DOMAIN = 'bluetooth-smartlock'
 POT_FILE = po/${GETTEXT_DOMAIN}.pot
 
 translate:
-	xgettext --from-code=UTF-8 *.js --output=${POT_FILE}
+	xgettext --from-code=UTF-8 *.js *.ui --output=${POT_FILE}
 
 %.po: translate
 	msgmerge -N -U $@ ${POT_FILE}

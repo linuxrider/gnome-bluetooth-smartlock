@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 00:07+0700\n"
+"POT-Creation-Date: 2026-04-02 07:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,26 +17,70 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: indicator.js:19
+#: indicator.js:14
 msgid "Bluetooth Smartlock"
 msgstr ""
 
-#: indicator.js:29
-msgid "Active"
+#: indicator.js:98
+msgid "Enable Smart Lock"
 msgstr ""
 
-#: indicator.js:40
-msgid "Smart Lock"
-msgstr ""
-
-#: indicator.js:47
+#: indicator.js:105
 msgid "Settings"
 msgstr ""
 
-#: indicator.js:53
-msgid "Devices"
+#: prefs.js:49
+msgid "General Settings"
 msgstr ""
 
-#: prefs.js:32
+#: prefs.js:50
+msgid "Basic settings for the extension."
+msgstr ""
+
+#: prefs.js:62
 msgid "Advanced Settings"
+msgstr ""
+
+#: prefs.js:137
+msgid "unavailable"
+msgstr ""
+
+#: prefs.js:230
+msgid "bt-rssi service is not installed"
+msgstr ""
+
+#: settings.ui:47
+msgid "Away duration (seconds)"
+msgstr ""
+
+#: settings.ui:89
+msgid "Reconnect polling"
+msgstr ""
+
+#: settings.ui:117
+msgid "Polling interval (seconds)"
+msgstr ""
+
+#: settings.ui:164
+msgid "Current RSSI"
+msgstr ""
+
+#: settings.ui:224
+msgid "Activate"
+msgstr ""
+
+#: settings.ui:260
+msgid "Hide indicator"
+msgstr ""
+
+#: settings.ui:296
+msgid "Unlock automatically"
+msgstr ""
+
+#: settings.ui:335
+msgid "Proximity lock (RSSI)"
+msgstr ""
+
+#: settings.ui:371
+msgid "Advanced settings"
 msgstr ""

@@ -65,6 +65,15 @@
                 <property name="focusable">1</property>
               </object>
             </child>
+          </object>
+        </property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkFrame">
+        <property name="child">
+          <object class="GtkListBox">
+            <property name="selection-mode">none</property>
             <child>
               <object class="GtkListBoxRow">
                 <property name="child">
@@ -85,55 +94,6 @@
                         <property name="focusable">1</property>
                         <property name="halign">end</property>
                         <property name="valign">center</property>
-                      </object>
-                    </child>
-                  </object>
-                </property>
-                <property name="focusable">1</property>
-              </object>
-            </child>
-          </object>
-        </property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkFrame">
-        <property name="child">
-          <object class="GtkListBox">
-            <property name="selection-mode">none</property>
-            <child>
-              <object class="GtkListBoxRow">
-                <property name="child">
-                  <object class="GtkBox">
-                    <property name="margin-bottom">12</property>
-                    <property name="margin-end">12</property>
-                    <property name="margin-start">12</property>
-                    <property name="margin-top">12</property>
-                    <child>
-                      <object class="GtkBox">
-                        <property name="spacing">6</property>
-                        <child>
-                          <object class="GtkLabel" id="rssi_threshold_label">
-                            <property name="label" translatable="yes">RSSI threshold (dBm)</property>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkImage" id="rssi_threshold_icon">
-                            <property name="icon-name">dialog-information-symbolic</property>
-                            <property name="visible">0</property>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkSpinButton" id="rssi_threshold">
-                        <property name="adjustment">rssi_adjustment</property>
-                        <property name="climb-rate">1</property>
-                        <property name="focusable">1</property>
-                        <property name="halign">end</property>
-                        <property name="hexpand">1</property>
-                        <property name="numeric">1</property>
-                        <property name="snap-to-ticks">1</property>
                       </object>
                     </child>
                   </object>
@@ -181,6 +141,15 @@
                 <property name="focusable">1</property>
               </object>
             </child>
+          </object>
+        </property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkFrame">
+        <property name="child">
+          <object class="GtkListBox">
+            <property name="selection-mode">none</property>
             <child>
               <object class="GtkListBoxRow" id="rssi_reading_row">
                 <property name="activatable">0</property>

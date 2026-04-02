@@ -43,3 +43,54 @@ git clone https://github.com/ba0f3/gnome-bluetooth-smartlock.git
 cd gnome-bluetooth-smartlock
 make install
 ```
+
+### bt-rssi service (optional)
+
+The **bt-rssi** service enables RSSI-based proximity locking. It reads signal strength from connected Bluetooth devices via the HCI management API in a more reliable way than scanning.
+
+Without this service, the extension only locks/unlocks based on device connected/disconnected state. With it, you can lock the screen when signal strength drops below a configurable threshold. To adjust the threshold to your needs a live reading is displayed in the advanced settings dialog.
+
+#### Build
+
+Requires Rust toolchain:
+
+```sh
+cd services/bt-rssi
+cargo build --release
+```
+
+#### Install
+
+```sh
+# Install the binary
+sudo cp target/release/bt-rssi /usr/local/bin/
+
+# Install the D-Bus policy (allows the service to own its bus name)
+sudo cp ../org.gnome.BluetoothRSSI.conf /etc/dbus-1/system.d/
+
+# Install and start the systemd service
+sudo cp ../bt-rssi.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now bt-rssi
+```
+
+[Pixi](https://pixi.prefix.dev/latest/):
+A pixi which manages the abovce installation process including rust toolchain setup is also provided.
+
+```sh
+cd services/bt-rssi
+pixi run install
+```
+
+#### Verify
+
+```sh
+# Check the service is running
+systemctl status bt-rssi
+
+# Start RSSI monitoring: address, interval (seconds), hci adapter index
+busctl --system call org.gnome.BluetoothRSSI /org/gnome/BluetoothRSSI \
+  org.gnome.BluetoothRSSI StartMonitoring suq "<MAC>" 3 0
+```
+
+Once installed, the extension's preferences will enable the **Proximity lock (RSSI)** toggle and **RSSI threshold** setting.

@@ -26,6 +26,7 @@ const DBUS_PATH: &str = "/org/gnome/BluetoothRSSI";
 struct BtRssiService {
     tasks:     Arc<Mutex<HashMap<String, JoinHandle<()>>>>,
     tx:        mpsc::Sender<(String, i16)>,
+    rt:        tokio::runtime::Handle,
 }
 
 #[interface(name = "org.gnome.BluetoothRSSI")]
@@ -47,12 +48,12 @@ impl BtRssiService {
             handle.abort();
         }
 
-        let addr      = address;
+        let addr      = address.clone();
         let tx        = self.tx.clone();
         let interval  = Duration::from_secs(interval_seconds.max(1) as u64);
         let tasks_ref = self.tasks.clone();
 
-        let handle = tokio::spawn(async move {
+        let handle = self.rt.spawn(async move {
             let mut ticker = tokio::time::interval(interval);
             ticker.set_missed_tick_behavior(tokio::time::MissedTickBehavior::Skip);
 
@@ -120,6 +121,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let service = BtRssiService {
         tasks:     tasks.clone(),
         tx,
+        rt:        tokio::runtime::Handle::current(),
     };
 
     let conn = connection::Builder::system()?
